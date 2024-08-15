@@ -1,0 +1,20 @@
+﻿  Building 'KMDF Driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\KMDFDriver.inf
+  Stamping [Version] section with DriverVer=06/04/2024,21.36.43.756
+  device.c
+  driver.c
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\driver.c(71,26): error C2220: 以下警告被视为错误
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\driver.c(71,26): warning C4100: “registryPath”: 未引用的形参
+  irp.c
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\irp.c(5,20): error C2220: 以下警告被视为错误
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\irp.c(5,20): warning C4100: “driver”: 未引用的形参
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\irp.c(120,16): warning C4189: “readSize”: 局部变量已初始化但不引用
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\irp.c(128,24): warning C4189: “irpStack”: 局部变量已初始化但不引用
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\irp.c(135,11): warning C4189: “inputBuffer”: 局部变量已初始化但不引用
+  memory.c
+  protect.c
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(58,20): error C2220: 以下警告被视为错误
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(58,20): warning C4047: “函数”:“UINT32”与“HANDLE”的间接级别不同
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(58,17): warning C4024: “isProtect”: 形参和实参 1 的类型不同
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(47,8): warning C4100: “RegistContext”: 未引用的形参
+  正在生成代码...

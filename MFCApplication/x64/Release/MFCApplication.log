@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  driver.cpp
+  MFCApplication.cpp
+  MFCApplicationDlg.cpp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 274 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  MFCApplication.vcxproj -> F:\dnfProject\driver\KMDF Driver\x64\Release\MFCApplication.exe

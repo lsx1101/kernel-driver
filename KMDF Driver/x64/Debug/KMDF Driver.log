@@ -1,0 +1,16 @@
+﻿  Building 'KMDF Driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Debug\KMDFDriver.inf
+  Stamping [Version] section with DriverVer=06/09/2024,21.57.28.670
+  device.c
+  driver.c
+  irp.c
+  memory.c
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\memory.c(13,24): warning C4996: 'ExAllocatePool': 被声明为已否决
+  protect.c
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(58,20): warning C4047: “函数”:“UINT32”与“HANDLE”的间接级别不同
+F:\dnfProject\driver\KMDF Driver\KMDF Driver\protect.c(58,17): warning C4024: “isProtect”: 形参和实参 1 的类型不同
+  正在生成代码...
+  KMDF Driver.vcxproj -> F:\dnfProject\driver\KMDF Driver\x64\Debug\KMDFDriver.sys
+  Done Adding Additional Store
+  Successfully signed: F:\dnfProject\driver\KMDF Driver\x64\Debug\KMDFDriver.sys
+  

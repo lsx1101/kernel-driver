@@ -1,0 +1,16 @@
+﻿  Building 'MemoryDriver' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Debug\MemoryDriver.inf
+  Stamping [Version] section with DriverVer=06/12/2024,21.23.57.787
+  CR0.cpp
+  正在生成代码...
+  正在编译...
+  Driver.c
+  Memory.c
+F:\dnfProject\driver\KMDF Driver\MemoryDriver\Memory.c(111,64): warning C4242: “函数”: 从“SIZE_T”转换到“ULONG”，可能丢失数据
+F:\dnfProject\driver\KMDF Driver\MemoryDriver\Memory.c(100,19): warning C4996: 'ExAllocatePool': 被声明为已否决
+F:\dnfProject\driver\KMDF Driver\MemoryDriver\Memory.c(123,22): warning C4996: 'MmMapLockedPages': 被声明为已否决
+  正在生成代码...
+  MemoryDriver.vcxproj -> F:\dnfProject\driver\KMDF Driver\x64\Debug\MemoryDriver.sys
+  Done Adding Additional Store
+  Successfully signed: F:\dnfProject\driver\KMDF Driver\x64\Debug\MemoryDriver.sys
+  

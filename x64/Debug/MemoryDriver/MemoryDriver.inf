@@ -1,0 +1,90 @@
+;
+; MemoryDriver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=MemoryDriver.cat
+DriverVer = 06/12/2024,21.23.57.787
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+MemoryDriver_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+MemoryDriver.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%MemoryDriver.DeviceDesc%=MemoryDriver_Device, Root\MemoryDriver ; TODO: edit hw-id
+
+[MemoryDriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+MemoryDriver.sys
+
+;-------------- Service installation
+[MemoryDriver_Device.NT.Services]
+AddService = MemoryDriver,%SPSVCINST_ASSOCSERVICE%, MemoryDriver_Service_Inst
+
+; -------------- MemoryDriver driver install sections
+[MemoryDriver_Service_Inst]
+DisplayName    = %MemoryDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\MemoryDriver.sys
+
+;
+;--- MemoryDriver_Device Coinstaller installation ------
+;
+
+[MemoryDriver_Device.NT.CoInstallers]
+AddReg=MemoryDriver_Device_CoInstaller_AddReg
+CopyFiles=MemoryDriver_Device_CoInstaller_CopyFiles
+
+[MemoryDriver_Device_CoInstaller_AddReg]
+;
+
+
+[MemoryDriver_Device_CoInstaller_CopyFiles]
+;
+
+
+[MemoryDriver_Device.NT.Wdf]
+KmdfService =  MemoryDriver, MemoryDriver_wdfsect
+[MemoryDriver_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "MemoryDriver Installation Disk"
+MemoryDriver.DeviceDesc = "MemoryDriver Device"
+MemoryDriver.SVCDESC = "MemoryDriver Service"

@@ -1,0 +1,12 @@
+﻿  MFCApplicationDlg.cpp
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(424,2): error C4235: 使用了非标准扩展: 不支持在此结构上使用“__asm”关键字
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(425,3): error C2065: “mov”: 未声明的标识符
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(425,7): error C2146: 语法错误: 缺少“;”(在标识符“eax”的前面)
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(425,7): error C2065: “eax”: 未声明的标识符
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(426,3): error C2146: 语法错误: 缺少“;”(在标识符“mov”的前面)
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(426,3): error C2065: “mov”: 未声明的标识符
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(426,7): error C2065: “eax”: 未声明的标识符
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(427,2): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(428,30): error C2660: “SetUnhandledExceptionFilter”: 函数不接受 0 个参数
+G:\Windows Kits\10\Include\10.0.19041.0\um\errhandlingapi.h(77,1): message : 参见“SetUnhandledExceptionFilter”的声明
+F:\dnfProject\driver\KMDF Driver\MFCApplication\MFCApplicationDlg.cpp(430,2): error C2146: 语法错误: 缺少“;”(在标识符“BYTE”的前面)
